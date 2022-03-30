@@ -21,8 +21,8 @@ def search(start, goal, graph):
 def get_children(graph, current, visited):
     children = []
     for child in graph[current]:
-        if child not in visited:
-            children.append(child)
+        if child[0] not in visited:
+            children.append(child[0])
     #children.reverse() to go on the left
     return children
         
@@ -31,6 +31,5 @@ def backtrack(start, current, backtrack_table):
     while current != start:
         path.append(current)
         current = backtrack_table[current]
-    path.append(start)
     path.reverse()
     return path
