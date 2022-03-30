@@ -1,9 +1,11 @@
-import graphlib
-from Graph import Graph
-
-graph = Graph(5)
-graph.initialize()
-graph.draw()
-spawn_point = graph.get_spawn_point()
-print('spawn point ->', spawn_point)
-print('destination point ->', graph.get_destination())
+graph = {
+	'A' : ['B', 'D', 'F'],
+	'B' : ['C', 'D'],
+	'C' : ['B', 'E'],
+	'D' : ['A', 'G'],
+	'E' : ['F', 'G'],
+	'F' : ['B', 'C'],
+	'G' : ['C']
+}
+start = 'A'
+goal = 'E'
