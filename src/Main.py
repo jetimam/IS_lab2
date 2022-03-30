@@ -1,7 +1,8 @@
+import DFS
 graph = {
-	'A' : ['B', 'D', 'F'],
-	'B' : ['C', 'D'],
-	'C' : ['B', 'E'],
+	'A' : ['D', 'B', 'F'],
+	'B' : ['D', 'C'],
+	'C' : ['E', 'B'],
 	'D' : ['A', 'G'],
 	'E' : ['F', 'G'],
 	'F' : ['B', 'C'],
@@ -9,3 +10,4 @@ graph = {
 }
 start = 'A'
 goal = 'E'
+print(DFS.search(start,goal,graph))
