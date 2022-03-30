@@ -1,5 +1,6 @@
-import DFS, BFS, Graph
+import DFS, BFS, Dijkstra, Graph
 start = 'Arad'
 goal = 'Bucharest'
-print('DFS path ->', DFS.search(start,goal,Graph.map))
-print('BFS path ->', BFS.search(start,goal,Graph.map))
+print('DFS ->', DFS.search(start,goal,Graph.map))
+print('BFS ->', BFS.search(start,goal,Graph.map))
+print('Dijsktra ->', Dijkstra.search(start,goal,Graph.map))
