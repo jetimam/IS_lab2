@@ -1,20 +1,22 @@
+from queue import Queue
+
 def search(start, goal, graph):
-    stack = []
+    queue = Queue(0)
     backtrack_table = {}
     visited = {}
-    stack.append(start)
+    queue.put(start)
     found = False
-    while not found and len(stack) > 0:
-        current = stack.pop()
-        visited[current] = True
+    while not found and not queue.empty():
+        current = queue.get()
         if current == goal:
             found = True
             return backtrack(start, current, backtrack_table)
         else:
             children = get_children(graph, current, visited)
             for child in children:
-                stack.append(child)
+                queue.put(child)
                 backtrack_table[child] = current
+                visited[child] = True
 
     return []
 

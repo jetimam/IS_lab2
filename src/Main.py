@@ -1,4 +1,5 @@
 import DFS
+import BFS
 graph = {
 	'A' : ['D', 'B', 'F'],
 	'B' : ['D', 'C'],
@@ -10,4 +11,5 @@ graph = {
 }
 start = 'A'
 goal = 'E'
-print(DFS.search(start,goal,graph))
+print('DFS path ->', DFS.search(start,goal,graph))
+print('BFS path ->', BFS.search(start,goal,graph))
