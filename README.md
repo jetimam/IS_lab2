@@ -1,0 +1,1 @@
+Searching algorithms lab for Intelligent Systems 1
