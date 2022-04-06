@@ -5,10 +5,12 @@ def search(start, goal, graph):
     backtrack_table = {}
     visited = {}
     queue.put(start)
+    n = 0
     while not queue.empty():
         current = queue.get()
+        n += 1
         if current == goal:
-            return backtrack(start, current, backtrack_table)
+            return [backtrack(start, current, backtrack_table), n]
         else:
             children = get_children(graph, current, visited)
             for child in children:
@@ -16,7 +18,7 @@ def search(start, goal, graph):
                 backtrack_table[child] = current
                 visited[child] = True
 
-    return []
+    return [[], n]
 
 def get_children(graph, current, visited):
     children = []

@@ -3,18 +3,20 @@ def search(start, goal, graph):
     backtrack_table = {}
     visited = {}
     stack.append(start)
+    n = 0
     while len(stack) > 0:
         current = stack.pop()
+        n += 1
         visited[current] = True
         if current == goal:
-            return backtrack(start, current, backtrack_table)
+            return [backtrack(start, current, backtrack_table), n]
         else:
             children = get_children(graph, current, visited)
             for child in children:
                 stack.append(child)
                 backtrack_table[child] = current
 
-    return []
+    return [[], n]
 
 def get_children(graph, current, visited):
     children = []
