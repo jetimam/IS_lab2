@@ -7,13 +7,13 @@ start_time = time.time()
 DFS_data = DFS.search(start, goal, Graph.map)
 DFS_time = time.time() - start_time
 print("DFS Path: " + str(DFS_data[0]) + " | Execution Time: " + str(DFS_time) +  " | Path Length: " + str(len(DFS_data[0])) + " | Total Expanded Nodes: " + str(DFS_data[1]))
-print("DFS complexity: O(V) + O(E) where e is a number of edges incident on a given vertex v")
+print("DFS complexity: O(V) + O(E) where E is the number of edges, and V is the number of vertices.")
 
 start_time = time.time()
 BFS_data = BFS.search(start, goal, Graph.map)
 BFS_time = time.time() - start_time
 print("BFS Path: " + str(BFS_data[0]) + " | Execution Time: " + str(BFS_time) +  " | Path Length: " + str(len(BFS_data[0])) + " | Total Expanded Nodes: " + str(BFS_data[1]))
-print("BFS complexity: O(V) + O(E) where e is a number of edges incident on a given vertex v")
+print("BFS complexity: O(V) + O(E) where E is the number of edges, and V is the number of vertices.")
 
 
 start_time = time.time()
